@@ -8,6 +8,8 @@ services:
     build: './build/php'
     volumes:
       - ./app:/var/www/html
+    depends_on:
+      - mysql
   mysql:
     ports:
       - "3306:3306"
@@ -19,6 +21,13 @@ services:
       MYSQL_DATABASE: "gritlands_website"
     volumes:
       - dbData:/var/lib/mysql
+    restart: always
+# Commented out for now, will require some set up on LIVE server
+#  storage-backup:
+#    build: './build/storage_backup'
+#    volumes:
+#      - dbData:/var/lib/backup/data
+
 volumes:
   app:
   dbData:
