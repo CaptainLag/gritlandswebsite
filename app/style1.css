@@ -1,5 +1,5 @@
 header {
-  background-color: #23d10c;
+  background-color: #168107;
   padding: 20px;
   text-align: center;
 }
@@ -7,7 +7,7 @@ header {
 body {
     margin: 20px;
     padding: 20px;
-    background: #8d0101;
+    background: #310101;
     background-image: url();/*we can upload images here for the fun of it*/
   }
 
@@ -47,22 +47,23 @@ body {
   }
 
   footer {
-background-color: #f2f2f2;
-padding: 20px;
-text-align: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
   }
 
   aside {
-    width: 250px;
-    background-color: #23d10c;
+    background-color: #19880a;
     padding: 20px;
-    margin-left: 20px;
+    float: right;
+    
   }
 
   h1 {
-    color:blue;
+    color:rgb(255, 255, 255);
     text-align: center;
-    font-size: large;
+    font-size: 1000%;
+    font-family: monospace;
     margin-bottom: 20px;
   }
   
