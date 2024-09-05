@@ -1,17 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-      <title>Registration Form</title>
-      <link rel="stylesheet" href="style1.css">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width-device-width, initial scale=1.0" />
+
+        <title>Registration Form</title>
+        <!--<title>Gritweb</title>-->
+        <!--Could have accessible mode to swap to different Stylesheet-->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" />
+        <link rel="stylesheet" href="style1.css">
+        <link rel="icon" type="image/x-icon" href="resources/images/favicon.ico">
     </head>
 
     <body>
       <!-- main header used across pages -->
       <header>
-        <h2>Welcome to the website!</h2>
+        <a href="index.html">
+          <h2>Gritweb version 0.024</h2>
+          <object data="resources/images/gritlands-logo.svg" type="image/svg+xml" style="width: 200px; height: 150px; opacity: 1; transition: opacity 0.3s ease;">
+            <img src="resources/images/fail-icon.svg" alt="Fallback image">
+          </object>
+        </a>
     </header>
         <nav>
             <menu>
@@ -31,23 +40,32 @@
 
         <!-- Main page content -->
     <main>
-        <h1>Join Our Community!</h1>
+        <h2>Join Our Community!</h2>
         <p>Sign up to receive updates, access exclusive content, and be part of something special.</p>
         <p>We have big plans for this site including Booking, Site Information, Character Creation and access to Rules, stay tuned!</p>
         
         <!-- Sign up for mailing list form, to be replaced with Register for an account -->
-        <form action="404.html" method="post"> 
+        <form action="scripts\mailing_submit.php" method="post"> 
           <div class="form-group">
-            <label for="name">Your Name:</label>
+            <label for="name">Your Preffered Name:</label>
+            <p>We'll use this as your account name later</p>
             <input type="text" id="name" name="name" required>
           </div>
           <div class="form-group">
             <label for="email">Email Address:</label>
             <input type="email" id="email" name="email" required>
           </div>
-          <button type="submit">Register Now</button>
-
+          <div class="form-group">
+            <label for="forename">Forename:</label>
+            <input type="text" id="forename" name="forename" required>
+          </div>
+          <div class="form-group">
+            <label for="surname">surname:</label>
+            <input type="text" id="surname" name="surname" required>
+          </div>
+          <button type="submit" name="submit">Register Now</button>
         </form>
+
     </main>
 </body>
 </html>
