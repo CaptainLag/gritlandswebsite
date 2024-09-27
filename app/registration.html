@@ -32,7 +32,7 @@
                 <li><a href="#">etc...</a></li>
             </menu>
             <!-- Search function -->
-             <form>
+             <form action="scripts/test.php" method="post">
                 <input type="search" name="q" placeholder="search query" />
                 <input type="submit" value="Go!" />
              </form>
@@ -45,11 +45,11 @@
         <p>We have big plans for this site including Booking, Site Information, Character Creation and access to Rules, stay tuned!</p>
         
         <!-- Sign up for mailing list form, to be replaced with Register for an account -->
-        <form action="scripts\mailing_submit.php" method="post"> 
+        <form action="scripts\process_registration.php" method="post"> 
           <div class="form-group">
-            <label for="name">Your Preffered Name:</label>
+            <label for="username">Your Preffered username:</label>
             <p>We'll use this as your account name later</p>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="username" required>
           </div>
           <div class="form-group">
             <label for="email">Email Address:</label>
@@ -60,8 +60,16 @@
             <input type="text" id="forename" name="forename" required>
           </div>
           <div class="form-group">
-            <label for="surname">surname:</label>
+            <label for="surname">Surname:</label>
             <input type="text" id="surname" name="surname" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <div class="form-group">
+            <label for="password_confirmation">Re-Enter password:</label>
+            <input type="password" id="password_confirmation" name="password_confirmation" required>
           </div>
           <button type="submit" name="submit">Register Now</button>
         </form>
