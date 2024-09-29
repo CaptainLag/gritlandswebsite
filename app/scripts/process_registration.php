@@ -34,7 +34,7 @@ $sql = "INSERT INTO user_accounts (username, email, forename, surname, password_
 $stmt = $mysqli->stmt_init();
 
 if ( ! $stmt->prepare($sql)) {  //returns false if SQL is broken
-    die("SQL Error: " . $mysqli->error);
+    die("prepare SQL Error: " . $mysqli->error);
 }
 
 $stmt ->bind_param("sssss", 
@@ -44,9 +44,13 @@ $stmt ->bind_param("sssss",
                     $_POST["surname"],
                     $password_hash);
 
-$stmt ->execute();
-
-echo "signup success";
-
-// print_r($_POST);
-//var_dump($password_hash);
+ if ($stmt ->execute()) {
+    header("Location: ../registration_submitted.html");
+    exit;
+} else {
+    if ($mysqli->errno === 1062){
+        die("Duplicate Email address entered");
+} else {
+    die("execute SQL Error: " . $mysqli->error);
+}
+}

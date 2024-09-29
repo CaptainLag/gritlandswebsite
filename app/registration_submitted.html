@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width-device-width, initial scale=1.0" />
+
+        <title>Registration Form</title>
+        <!--<title>Gritweb</title>-->
+        <!--Could have accessible mode to swap to different Stylesheet-->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" />
+        <link rel="stylesheet" href="style1.css">
+        <link rel="icon" type="image/x-icon" href="resources/images/favicon.ico">
+    </head>
+
+    <body>
+      <!-- main header used across pages -->
+      <header>
+        <a href="index.html">
+          <h2>Gritweb version 0.024</h2>
+          <object data="resources/images/gritlands-logo.svg" type="image/svg+xml" style="width: 200px; height: 150px; opacity: 1; transition: opacity 0.3s ease;">
+            <img src="resources/images/fail-icon.svg" alt="Fallback image">
+          </object>
+        </a>
+    </header>
+        <nav>
+            <menu>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Booking</a></li>
+                <li><a href="#">Da Rules</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">etc...</a></li>
+            </menu>
+            <!-- Search function -->
+             <form action="test.php" method="post">
+                <input type="search" name="q" placeholder="search query" />
+                <input type="submit" value="Go!" />
+             </form>
+        </nav>
+
+        <!-- Main page content -->
+    <main>
+        <p>Registration submitted</p>
+        <p>Expect the next parts of the process to happen soon...</p>
+        <p>You can now log in <a href="/scripts/login.php">HERE</a></p>
+    </main>
+</body>
+</html>
