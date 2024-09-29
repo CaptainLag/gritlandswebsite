@@ -1,4 +1,5 @@
 <?php
+mysqli_report(MYSQLI_REPORT_OFF);
 
 if (empty($_POST["username"])) {
     die("name is required");

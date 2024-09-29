@@ -8,11 +8,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $mysqli->real_escape_string($_POST["email"]));
 
     $result = $mysqli->query($sql);
+
     $user = $result->fetch_assoc();
 
     if ($user) { //User true = there is a user
         if (password_verify($_POST["password"], $user["password_hash"])) {//true if password valid
-            die("login success");
+            
+            session_start();
+            session_regenerate_id();
+            $_SESSION["user_id"] = $user["id"];
+
+             header("Location: index.php");
+             exit;
         }
     }
     $is_invalid = true;
