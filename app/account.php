@@ -1,3 +1,8 @@
+<?php 
+include 'loginstatus.php';
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,8 +22,16 @@
             <h2>Gritweb version 0.024</h2>
         </header>
             <nav>
+                        <!-- Login function -->
+                        <?php if (isset($user)): ?>
+                        <p>Hi <?= htmlspecialchars($user["username"]) ?> you are logged in</p>
+                        <p><a href="logout.php">Log out</a></p>
+                    <?php else: ?>
+                        <p><a href="login.php">Log in</a> or <a href="registration.html">Register an account</a></p>
+                    <?php endif; ?>
+            
                 <menu>
-                    <li><a href="account.html">Account</a></li>
+                    <li><a href="account.php">Account</a></li>
                     <li><a href="booking.html">Booking</a></li>
                     <li><a href="https://rulebook.gritlands.co.uk">Da Rules</a></li>
                     <li><a href="about.html">About us</a></li>
@@ -34,7 +47,9 @@
             </nav>
 
         <!-- Main page content -->
-        <p> account </p>
+         <main>
+            <p> account </p>
+        </main>
 
     </body>
     <footer>
