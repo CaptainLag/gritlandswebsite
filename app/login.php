@@ -2,7 +2,7 @@
 $is_invalid = false;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $mysqli = require __DIR__ . "/database.php";
+    $mysqli = require __DIR__ . "/scripts/database.php";
     $sql = sprintf("SELECT * FROM user_accounts
                 WHERE email = '%s'", 
                 $mysqli->real_escape_string($_POST["email"]));
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             session_regenerate_id();
             $_SESSION["user_id"] = $user["id"];
 
-             header("Location: index.php");
+             header("Location: ../index.php");
              exit;
         }
     }
