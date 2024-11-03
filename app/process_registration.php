@@ -47,6 +47,10 @@ $stmt ->bind_param("sssss",
 
  if ($stmt ->execute()) {
     header("Location: ../registration_submitted.html");
+
+// TODO: send confirmation email to user to say they've registered. 
+// Looking into using Mailjet or Sendgrid instead of dealing with my own SMTP Server
+
     exit;
 } else {
     if ($mysqli->errno === 1062){

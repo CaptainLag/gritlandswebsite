@@ -48,7 +48,40 @@ include 'loginstatus.php';
 
         <!-- Main page content -->
          <main>
-            <p> account </p>
+            <h1>Account </h1>
+            <p>This is where all of your account details can be updated</p>
+            <p>Please remember to hit Submit otherwise changes will not be saved</p>
+
+        <!-- will continue to add more details as they are included in features -->
+        <!-- we should log all changes in case we need to reverse changes --> 
+        <form action="update_user_account.php" method="post"> 
+          <div class="form-group">
+            <label for="username">Your Preffered username:</label>
+            <input type="text" id="name" name="username" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="forename">Forename:</label>
+            <input type="text" id="forename" name="forename" required>
+          </div>
+          <div class="form-group">
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <div class="form-group">
+            <label for="password_confirmation">Re-Enter password:</label>
+            <input type="password" id="password_confirmation" name="password_confirmation" required>
+          </div>
+          <button type="submit" name="submit">Submit</button>
+        </form>
+
         </main>
 
     </body>
